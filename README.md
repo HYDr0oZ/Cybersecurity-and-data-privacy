@@ -9,3 +9,7 @@
 | 8.11.2025 | 2 | Module 5  | Module 5: exam passed |
 | 9.11.2025 | 0.5 | Course final exam | Course final exam : exam passed |
 | 11.11.2025 | 2 | Lecture | Intro to penetration testing |
+| 16.11.2025 | 2 | Portswingger Labs | 2 SQL injection & 1 Authentification lab done |
+| 18.11.2025 | 2 | Portswingger Labs | 2 Acces control vulnerability & 1 Authentification lab done |
+
+
