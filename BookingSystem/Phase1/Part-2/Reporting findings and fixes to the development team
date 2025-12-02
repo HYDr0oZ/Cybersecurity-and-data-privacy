@@ -27,7 +27,7 @@ To verify the fix, I reviewed the Summary of Alerts in the Round 2 report. The "
 2.  Performed an Active Scan on the `/register` endpoint.
 3.  Verified in the Round 2 report that the "High" priority alert count is zero.
 
-> ![Alerts screenshot](BookingSystem/Phase1/Part-2/Capture d'écran 2025-12-02 202648.png)
+> ![Alerts screenshot](BookingSystem/Phase1/Part-2/screenshots/alert.png)
 
 ---
 
