@@ -11,6 +11,9 @@
 | 11.11.2025 | 2 | Lecture | Intro to penetration testing |
 | 16.11.2025 | 2 | Portswingger Labs | 2 SQL injection & 1 Authentification lab done |
 | 18.11.2025 | 2 | Portswingger Labs | 2 Acces control vulnerability & 1 Authentification lab done |
-| 25.11.2025 | 3 |  phase 1 -> part 1| attack a registration page|
+| 18.11.2025 | 4 | Lecture | Intro to the booking system phase 1 |
+| 24.11.2025 | 2 | Lecture | Intro to authentication |
+| 25.11.2025 | 3 |  phase 1 -> part 1| Attack a web page to find vulnerabilities  |
+| 02.12.2025 | 3 |  phase 1 -> part 2| Verified if the vulnerabilities has been fixed |
 
 
