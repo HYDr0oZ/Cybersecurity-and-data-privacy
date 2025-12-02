@@ -1,0 +1,98 @@
+# Reporting Findings and Fixes
+
+**Topic:** Security Audit Report: Verification of Remediation
+
+**Tester:** Baptiste Rault
+
+---
+
+## Executive Summary
+
+This report details the verification status of the Top 5 security vulnerabilities identified during the initial security scan (Round 1). Following the remediation phase, a second scan (Round 2) was performed to verify whether the reported issues were successfully resolved.
+
+Below is the status of each finding.
+
+---
+
+### 1. SQL Injection
+* **Risk Level:** High
+* **Status:** ✅ **Fixed**
+
+#### Identification and Verification
+In the initial scan (Round 1), ZAP identified a critical SQL Injection vulnerability on the `username` parameter during the registration process (`POST /register`), which triggered a 500 Internal Server Error.
+To verify the fix, I reviewed the Summary of Alerts in the Round 2 report. The "High" risk category now shows 0 alerts, and "SQL Injection" is absent from the alert list.
+
+#### Verification Steps
+1.  Targeted the updated application URL (port 8001).
+2.  Performed an Active Scan on the `/register` endpoint.
+3.  Verified in the Round 2 report that the "High" priority alert count is zero.
+
+> 
+
+---
+
+### 2. Format String Error
+* **Risk Level:** Medium
+* **Status:** ✅ **Fixed**
+
+#### Identification and Verification
+The first report flagged a Format String Error where the application mishandled specific string input characters (e.g., `%n%s`) in the `username` field.
+I verified the fix by comparing the alert lists. The Round 2 report only lists "Absence of Anti-CSRF Tokens" under Medium risks; the "Format String Error" is no longer present.
+
+#### Verification Steps
+1.  Configured ZAP as the browser proxy.
+2.  Resubmitted registration data containing format string payloads.
+3.  Confirmed via the Round 2 report that no Format String errors were logged.
+
+> *[Insert screenshot of Round 2 "Alerts" list showing the absence of Format String Error]*
+
+---
+
+### 3. Absence of Anti-CSRF Tokens
+* **Risk Level:** Medium
+* **Status:** ❌ **Not Fixed**
+
+#### Identification and Verification
+During the initial audit, ZAP reported that the HTML submission form `<form action="/register" method="POST">` lacked Anti-CSRF tokens.
+Upon analyzing the Round 2 report, this vulnerability **persists**. The alert "Absence of Anti-CSRF Tokens" appears in the second report targeting the exact same URL (`http://localhost:8001/register`), indicating the patch was not applied or was ineffective.
+
+#### Verification Steps
+1.  Navigated to the `/register` page on the updated port (8001).
+2.  inspected the source code for hidden token fields.
+3.  Cross-referenced with the Round 2 ZAP report, which explicitly lists "Absence of Anti-CSRF Tokens" (Instances: 1).
+
+> *[Insert screenshot of Round 2 report showing the "Absence of Anti-CSRF Tokens" alert]*
+
+---
+
+### 4. Content Security Policy (CSP) Header Not Set
+* **Risk Level:** Medium
+* **Status:** ✅ **Fixed**
+
+#### Identification and Verification
+Round 1 identified 4 instances where the `Content-Security-Policy` header was missing.
+Verification was done by inspecting the Medium risk alerts in the Round 2 scan results. The alert for missing CSP headers has disappeared from the report (the only remaining Medium alert is the CSRF issue).
+
+#### Verification Steps
+1.  Sent a GET request to the homepage via ZAP.
+2.  Inspected the "Response Headers" tab.
+3.  Confirmed the alert is missing from the "Medium" risk section of the Round 2 report.
+
+> *[Insert screenshot of response headers or clean alert summary]*
+
+---
+
+### 5. Missing Anti-clickjacking Header
+* **Risk Level:** Medium
+* **Status:** ✅ **Fixed**
+
+#### Identification and Verification
+The initial report flagged the absence of `X-Frame-Options` or `Content-Security-Policy` frame directives on 4 instances.
+In the Round 2 report, this specific alert is no longer present in the "Alerts" table. This confirms that the necessary HTTP response headers are now being sent to prevent the site from being framed.
+
+#### Verification Steps
+1.  Crawled the application using the ZAP Spider.
+2.  Checked the "Alerts" detail in the generated Round 2 report.
+3.  Verified that "Missing Anti-clickjacking Header" is not listed.
+
+> *[Insert screenshot of the Round 2 summary table]*
