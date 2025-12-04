@@ -27,7 +27,7 @@ To verify the fix, I reviewed the Summary of Alerts in the Round 2 report. The "
 2.  Performed an Active Scan on the `/register` endpoint.
 3.  Verified in the Round 2 report that the "High" priority alert count is zero.
 
-> ![alert screenshot](screenshots/scan_round2.png)
+> ![alert screenshot](screenshots/alert.png)
 
 ---
 
@@ -44,7 +44,7 @@ I verified the fix by comparing the alert lists. The Round 2 report only lists "
 2.  Resubmitted registration data containing format string payloads.
 3.  Confirmed via the Round 2 report that no Format String errors were logged.
 
-> ![alert screenshot](screenshots/scan_round2.png)
+> ![alert screenshot](screenshots/alert.png)
 
 ---
 
@@ -61,7 +61,7 @@ Upon analyzing the Round 2 report, this vulnerability **persists**. The alert "A
 2.  inspected the source code for hidden token fields.
 3.  Cross-referenced with the Round 2 ZAP report, which explicitly lists "Absence of Anti-CSRF Tokens" (Instances: 1).
 
-> ![alert screenshot](screenshots/scan_round2.png)
+> ![alert screenshot](screenshots/alert.png)
 
 ---
 
@@ -78,7 +78,7 @@ Verification was done by inspecting the Medium risk alerts in the Round 2 scan r
 2.  Inspected the "Response Headers" tab.
 3.  Confirmed the alert is missing from the "Medium" risk section of the Round 2 report.
 
-> ![alert screenshot](screenshots/scan_round2.png)
+> ![alert screenshot](screenshots/alert.png)
 
 ---
 
@@ -95,4 +95,4 @@ In the Round 2 report, this specific alert is no longer present in the "Alerts" 
 2.  Checked the "Alerts" detail in the generated Round 2 report.
 3.  Verified that "Missing Anti-clickjacking Header" is not listed.
 
-> ![alert screenshot](screenshots/scan_round2.png)
+> ![alert screenshot](screenshots/alert.png)
