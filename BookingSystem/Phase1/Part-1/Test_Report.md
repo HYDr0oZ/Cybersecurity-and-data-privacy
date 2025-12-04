@@ -57,3 +57,10 @@
 | F-03 | 🟠 Medium  | Format String Error | The application evaluates input strings as commands, potentially leading to crashes or execution. | Payload: ZAP%n%s%n%s... |
 | F-04 | 🟠 Medium | Missing Security Headers (CSP & Clickjacking) | Content-Security-Policy and X-Frame-Options are missing, exposing the site to XSS and Clickjacking. | Headers missing on /register and / |
 | F-06 | 🟡 Low | Application Error Disclosure | The application returns verbose 500 errors that may disclose sensitive file paths or stack traces. | Status: 500 Internal Server Error on /register |
+
+
+---
+
+# 5️⃣ OWASP ZAP Test Report (Attachment)
+https://github.com/HYDr0oZ/Cybersecurity-and-data-privacy/blob/main/BookingSystem/Phase1/ZAP-Report-round1.md
+
