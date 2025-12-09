@@ -15,5 +15,10 @@
 | 24.11.2025 | 2 | Lecture | Intro to authentication |
 | 25.11.2025 | 3 |  phase 1 -> part 1| Attack a web page to find vulnerabilities  |
 | 02.12.2025 | 3 |  phase 1 -> part 2| Verified if the vulnerabilities has been fixed |
+| 04.12.2025 | 2 | Lecture | Intro to authorization |
+| 08.12.2025 | 4 |  phase 2 | Craking password with hashcat and rockyou wordlist |
+| 09.12.2025 | 4 | Lecture | Workshop |
+
+
 
 
