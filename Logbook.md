@@ -12,7 +12,7 @@
 | 16.11.2025 | 2.5 | Portswingger Labs | 2 SQL injection & 1 Authentification lab done |
 | 18.11.2025 | 2.5 | Portswingger Labs | 2 Acces control vulnerability & 1 Authentification lab done |
 | 18.11.2025 | 4 | Lecture | Intro to the booking system phase 1 |
-| 20.11.2025 | 3 | Portswingger Labs | 4 Cross-site scripting |
+| 20.11.2025 | 3 | Portswingger Labs | 3 Cross-site scripting |
 | 22.11.2025 | 1.5 | Portswingger Labs | 2 Cross-site scripting |
 | 24.11.2025 | 2 | Lecture | Intro to authentication & booking system phase 2 |
 | 25.11.2025 | 3 |  phase 1 -> part 1| Attack a web page to find vulnerabilities  |
